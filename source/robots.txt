@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lichye.github.io/sitemap.xml

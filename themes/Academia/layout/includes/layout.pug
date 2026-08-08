@@ -1,0 +1,77 @@
+doctype html
+html(lang=config.language)
+    -
+        const siteTitle = config.title || '';
+        const pageTitle = is_home()
+            ? (config.home_title || siteTitle)
+            : (page.title ? `${page.title} | ${siteTitle}` : siteTitle);
+        const metaDescription = page.description || config.description || '';
+        const keywords = Array.isArray(config.keywords) ? config.keywords.join(', ') : (config.keywords || '');
+        const baseUrl = (config.url || '').replace(/\/$/, '');
+        const rawPath = page.path ? `/${page.path}` : '/';
+        const normalizedPath = rawPath === '/index.html' ? '/' : rawPath.replace(/index\.html$/, '');
+        const canonicalUrl = baseUrl ? `${baseUrl}${normalizedPath}` : undefined;
+        const sameAs = theme.social_links ? Object.values(theme.social_links).filter(Boolean) : [];
+        const topics = Array.isArray(config.keywords) ? config.keywords.filter((item) => item !== config.title) : undefined;
+        const profileEntity = {
+          '@context': 'https://schema.org',
+          '@type': 'ProfilePage',
+          'name': siteTitle,
+          'url': baseUrl || undefined,
+          'mainEntity': {
+            '@type': 'Person',
+            'name': config.author || siteTitle,
+            'description': metaDescription || undefined,
+            'url': baseUrl || undefined,
+            'affiliation': config.profile_affiliation ? { '@type': 'Organization', 'name': config.profile_affiliation } : undefined,
+            'sameAs': sameAs.length ? sameAs : undefined,
+            'knowsAbout': topics && topics.length ? topics : undefined,
+            'image': baseUrl && theme.avatar ? `${baseUrl}${url_for(theme.avatar)}` : undefined
+          }
+        };
+        function prune(value) {
+          if (Array.isArray(value)) return value.filter(Boolean).map(prune);
+          if (value && typeof value === 'object') {
+            return Object.fromEntries(
+              Object.entries(value)
+                .filter(([, entry]) => entry !== undefined && entry !== null && !(Array.isArray(entry) && !entry.length))
+                .map(([key, entry]) => [key, prune(entry)])
+            );
+          }
+          return value;
+        }
+    head
+        meta(charset='UTF-8')
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        meta(name='viewport' content='width=device-width, initial-scale=1, maximum-scale=5')
+        title= pageTitle
+        meta(name='author' content=config.author)
+        if metaDescription
+            meta(name='description' content=metaDescription)
+        if keywords
+            meta(name='keywords' content=keywords)
+        meta(name='robots' content='index,follow')
+        if canonicalUrl
+            link(rel='canonical' href=canonicalUrl)
+            meta(property='og:url' content=canonicalUrl)
+        meta(property='og:site_name' content=siteTitle)
+        meta(property='og:title' content=pageTitle)
+        if metaDescription
+            meta(property='og:description' content=metaDescription)
+        meta(property='og:type' content=is_home() ? 'profile' : 'website')
+        if is_home()
+            script(type='application/ld+json')!= JSON.stringify(prune(profileEntity))
+        !=favicon_tag(config.favicon || theme.favicon || '/favicon.ico')
+        each item in theme.CDN_USE.css
+            link(rel='stylesheet', href=url_for(item))
+    body
+        header#page_header
+            include ./header.pug
+        main#page_main
+            include ./side-card.pug
+            block content
+        include ./mobile-nav.pug
+        footer#page_footer
+            include ./footer.pug
+        each item in theme.CDN_USE.js
+            script(src=url_for(item))
