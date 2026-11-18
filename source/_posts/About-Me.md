@@ -26,8 +26,6 @@ My research interests lie in **hardware formal verification** and **program synt
 
 ## Publications
 
-- **Leiqi Ye**, Yixuan Li, Guy Frankel, Jianyi Cheng, and Elizabeth Polgreen. Journal version of the FMCAD 2025 paper. *Formal Methods in System Design* (invited, under revision).
-
 - **Leiqi Ye**, Guy Frankel, Jianyi Cheng, and Elizabeth Polgreen. 2026. Massively Parallel Mining of Specifications for Hardware Designs. In *Proceedings of the 38th International Conference on Computer Aided Verification (CAV '26)*. [PDF](attaches/2026CAV_Camera.pdf) [Repo](https://github.com/lichye/smartVerilog)
 
 - **Leiqi Ye**, Yixuan Li, Guy Frankel, Jianyi Cheng, and Elizabeth Polgreen. 2025. Unlocking Hardware Verification with Oracle Guided Synthesis. In *Proceedings of the 25th Conference on Formal Methods in Computer-Aided Design (FMCAD '25)*. [PDF](attaches/2025FMCAD_Camera.pdf) [Repo](https://github.com/lichye/smartVerilog)
