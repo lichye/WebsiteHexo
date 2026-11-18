@@ -4,9 +4,12 @@ block content
     .page(itemscope itemtype='http://schema.org/Blog')
         h2.page-title Blog
         article
-            ul.post-list
-                each article in page.posts.data
-                    if !article.academia
+            - var posts = page.posts.data.filter(function (item) { return !item.academia })
+            if posts.length
+                ul.post-list
+                    each article in posts
                         li.post-list-item
                             span.post-date= date(article.date, 'YYYY-MM-DD')
                             a.post-link(href=url_for(article.path))= article.title
+            else
+                p No posts yet.

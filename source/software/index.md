@@ -10,6 +10,6 @@ title: Software
 
 ## Bugs found by formal verification
 
-- **AMD Vitis HLS 2025.1**: confirmed miscompilation. The generated RTL can report completion right after reset, before it has done any work. [Reproducer](https://github.com/lichye/vitis-hls-reset-repro) · [Write-up](/blog/vitis-hls-reset-bug/)
+- **AMD Vitis HLS 2025.1**: confirmed miscompilation. The generated RTL can report completion right after reset, before it has done any work. [Reproducer](https://github.com/lichye/vitis-hls-reset-repro)
 
 - **HW-CBMC**: confirmed soundness bugs in the Verilog frontend. [Issue](https://github.com/diffblue/hw-cbmc/issues/880)
