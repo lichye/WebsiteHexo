@@ -6,9 +6,11 @@ permalink: title/
 ---
 # Leiqi Ye
 
-I am Leiqi Ye, a second-year PhD student in Computer Science at the University of Edinburgh, advised by [**Dr. Elizabeth Polgreen**](https://polgreen.github.io/) and [**Dr. Jianyi Cheng**](https://jianyicheng.github.io/). Prior to my PhD, I completed my undergraduate studies at the University of Michigan, where I worked with [**Prof. Yatin Manerkar**](https://web.eecs.umich.edu/~manerkar/).
+I am a third-year PhD student in Computer Science at the University of Edinburgh, advised by [**Dr. Jianyi Cheng**](https://jianyicheng.github.io/) and [**Dr. Elizabeth Polgreen**](https://polgreen.github.io/). Before my PhD, I studied at the University of Michigan, where I worked with [**Prof. Yatin Manerkar**](https://web.eecs.umich.edu/~manerkar/).
 
-My research interests lie in **hardware formal verification** and **program synthesis**, with a broader goal of improving the reliability and automation of hardware design, as well as enhancing the scalability of verification techniques.
+I work on **hardware formal verification**. My research automates the two tasks that still need an expert: writing specifications and decomposing whole-chip proofs. The goal is to keep real-scale, LLM-optimized designs trustworthy.
+
+My work has found confirmed bugs in AMD Vitis HLS and in the HW-CBMC model checker. In the winter of 2025–26 I was an Applied Scientist Intern at AWS Annapurna Labs, where I formally verified Trainium chip designs.
 
 ## News
 
