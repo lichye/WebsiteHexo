@@ -1,0 +1,9 @@
+extends includes/layout
+
+block content
+    .page(itemscope itemtype='http://schema.org/BlogPosting')
+        h2.page-title!= page.title
+        article
+            if !page.academia
+                p.post-meta= date(page.date, 'YYYY-MM-DD')
+            != page.content

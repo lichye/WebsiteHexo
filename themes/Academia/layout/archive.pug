@@ -1,0 +1,12 @@
+extends includes/layout
+
+block content
+    .page(itemscope itemtype='http://schema.org/Blog')
+        h2.page-title Blog
+        article
+            ul.post-list
+                each article in page.posts.data
+                    if !article.academia
+                        li.post-list-item
+                            span.post-date= date(article.date, 'YYYY-MM-DD')
+                            a.post-link(href=url_for(article.path))= article.title

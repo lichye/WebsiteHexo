@@ -2,6 +2,7 @@
 title: About Me
 academia: true
 date: 2026-04-25
+permalink: title/
 ---
 # Leiqi Ye
 
@@ -11,6 +12,7 @@ My research interests lie in **hardware formal verification** and **program synt
 
 ## News
 
+- 2026/07   Presented "Massively Parallel Mining of Specifications for Hardware Designs" at CAV 2026.
 - 2026/04   Serving on the Artifact Evaluation Committee and as Sub Reviewer for OOPSLA 2026.
 - 2026/04   "Massively Parallel Mining of Specifications for Hardware Designs" accepted at CAV 2026.
 - 2026/03   Completed internship at Annapurna Labs (Amazon) as Applied Scientist Intern.
@@ -24,8 +26,10 @@ My research interests lie in **hardware formal verification** and **program synt
 
 ## Publications
 
-- **Leiqi Ye**, Guy Frankel, Jianyi Cheng, Elizabeth Polgreen. Massively Parallel Mining of Specifications for Hardware Designs. 38th International Conference on Computer Aided Verification (CAV), July 2026.
+- **Leiqi Ye**, Yixuan Li, Guy Frankel, Jianyi Cheng, and Elizabeth Polgreen. Journal version of the FMCAD 2025 paper. *Formal Methods in System Design* (invited, under revision).
 
-- **Leiqi Ye**, Yixuan Li, Guy Frankel, Jianyi Cheng, Elizabeth Polgreen. Unlocking Hardware Verification with Oracle Guided Synthesis. The 25th Conference on Formal Methods in Computer-Aided Design (FMCAD), October 2025. [PDF](attaches/2025FMCAD_Camera.pdf) [Repo](https://github.com/lichye/smartVerilog)
+- **Leiqi Ye**, Guy Frankel, Jianyi Cheng, and Elizabeth Polgreen. 2026. Massively Parallel Mining of Specifications for Hardware Designs. In *Proceedings of the 38th International Conference on Computer Aided Verification (CAV '26)*. [PDF](attaches/2026CAV_Camera.pdf) [Repo](https://github.com/lichye/smartVerilog)
 
-- Adwait Godbole, **Leiqi Ye**, Yatin A. Manerkar, and Sanjit A. Seshia. Modelling and Verification of Security-Oriented Resource Partitioning Schemes. The 23rd Conference on Formal Methods in Computer-Aided Design (FMCAD), October 2023. [PDF](attaches/2023FMCAD_Camera.pdf) [Repo](https://github.com/lichye/sec_resource_partitioning)
+- **Leiqi Ye**, Yixuan Li, Guy Frankel, Jianyi Cheng, and Elizabeth Polgreen. 2025. Unlocking Hardware Verification with Oracle Guided Synthesis. In *Proceedings of the 25th Conference on Formal Methods in Computer-Aided Design (FMCAD '25)*. [PDF](attaches/2025FMCAD_Camera.pdf) [Repo](https://github.com/lichye/smartVerilog)
+
+- Adwait Godbole, **Leiqi Ye**, Yatin A. Manerkar, and Sanjit A. Seshia. 2023. Modelling and Verification of Security-Oriented Resource Partitioning Schemes. In *Proceedings of the 23rd Conference on Formal Methods in Computer-Aided Design (FMCAD '23)*. [PDF](attaches/2023FMCAD_Camera.pdf) [Repo](https://github.com/lichye/sec_resource_partitioning)
